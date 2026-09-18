@@ -1,0 +1,1 @@
+"use client";export default function SpeakButton({text}:{text:string}){function speak(){speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang="nl-NL";u.rate=.85;speechSynthesis.speak(u)}return <button onClick={speak}>🔊 Luister</button>}
