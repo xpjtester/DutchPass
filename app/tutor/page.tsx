@@ -1,0 +1,1 @@
+export default function Tutor(){return <main style={{maxWidth:700,margin:"60px auto",padding:24}}><a href="/">← DutchPass</a><h1>AI Tutor</h1><p>Coming next: ask grammar questions, explain mistakes and practice Dutch conversations. AI will only be called when needed to keep costs low.</p></main>}
