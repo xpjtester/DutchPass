@@ -1,0 +1,16 @@
+alter table courses add column if not exists slug text unique;
+alter table lessons add column if not exists slug text;
+alter table lessons add column if not exists level text;
+alter table lessons add column if not exists skill text;
+alter table lessons add column if not exists estimated_minutes integer default 10;
+alter table exercises add column if not exists options jsonb;
+alter table exercises add column if not exists audio_text text;
+alter table exercises add column if not exists max_score integer default 1;
+create table if not exists practice_attempts(id bigint generated always as identity primary key,user_id uuid not null references auth.users(id) on delete cascade,exercise_id bigint references exercises(id) on delete cascade,response text,correct boolean,score integer default 0,created_at timestamptz default now());
+alter table practice_attempts enable row level security;
+create policy "users read own attempts" on practice_attempts for select using(auth.uid()=user_id);
+create policy "users insert own attempts" on practice_attempts for insert with check(auth.uid()=user_id);
+create table if not exists study_sessions(id bigint generated always as identity primary key,user_id uuid not null references auth.users(id) on delete cascade,minutes integer default 0,completed_exercises integer default 0,created_at timestamptz default now());
+alter table study_sessions enable row level security;
+create policy "users read own sessions" on study_sessions for select using(auth.uid()=user_id);
+create policy "users insert own sessions" on study_sessions for insert with check(auth.uid()=user_id);
