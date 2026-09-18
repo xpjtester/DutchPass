@@ -1,0 +1,1 @@
+export const metadata={title:"DutchPass",description:"Learn Dutch. Pass with confidence."};export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="nl"><body style={{margin:0,fontFamily:"Arial, sans-serif",color:"#111"}}>{children}</body></html>}
