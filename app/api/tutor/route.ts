@@ -1,0 +1,1 @@
+import {NextResponse} from "next/server";export async function POST(req:Request){const{question}=await req.json();if(!question||typeof question!=="string")return NextResponse.json({error:"Question required"},{status:400});return NextResponse.json({message:"AI Tutor provider is not configured yet.",question});}
