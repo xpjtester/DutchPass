@@ -1,0 +1,4 @@
+create table courses(id bigint generated always as identity primary key,title text not null,level text not null,description text,position integer default 0,created_at timestamptz default now());
+create table lessons(id bigint generated always as identity primary key,course_id bigint references courses(id) on delete cascade,title text not null,description text,position integer default 0,created_at timestamptz default now());
+create table exercises(id bigint generated always as identity primary key,lesson_id bigint references lessons(id) on delete cascade,type text not null,question text not null,answer text not null,explanation text,position integer default 0);
+create table user_progress(id bigint generated always as identity primary key,user_id uuid not null,lesson_id bigint references lessons(id) on delete cascade,score integer default 0,completed boolean default false,updated_at timestamptz default now(),unique(user_id,lesson_id));
