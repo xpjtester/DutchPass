@@ -9,6 +9,7 @@ const skillCards = [
   {title:"Spreken",icon:"🎙️",desc:"Korte antwoorden, situaties en extra spreektraining.",href:"/a2/spreken",meta:"7 oefentoetsen · 84 vragen",active:true},
   {title:"Lezen",icon:"📖",desc:"Korte teksten, berichten en praktische leesvragen.",href:"#",meta:"Binnenkort",active:false},
   {title:"Luisteren",icon:"🎧",desc:"Gesprekken, mededelingen en luistervragen.",href:"#",meta:"Binnenkort",active:false},
+  {title:"KNM",icon:"🇳🇱",desc:"Kennis van de Nederlandse Maatschappij: wonen, werk, zorg, overheid en dagelijks leven.",href:"/a2/knm",meta:"KNM-cursus · oefenvragen · proefexamens",active:true},
 ];
 
 export default function Course(){
