@@ -1,0 +1,7 @@
+"use client";
+import Link from "next/link";
+import {useParams} from "next/navigation";
+import {useState} from "react";
+import SpeakButton from "../../../../../components/SpeakButton";
+import {a2SpeakingTests,speakingSource} from "../../../../../data/a2-speaking-tests";
+export default function Page(){const params=useParams<{number:string}>();const n=Number(params.number);const questions=a2SpeakingTests[n];const[show,setShow]=useState<Record<number,boolean>>({});if(!questions)return <main style={{maxWidth:820,margin:"50px auto",padding:24}}><Link href="/a2/spreken">← Spreken</Link><h1>Toets niet gevonden</h1></main>;return <main style={{maxWidth:820,margin:"50px auto",padding:24}}><Link href="/a2/spreken">← Spreekvaardigheid</Link><h1>A2 Spreekvaardigheid · Oefentoets {n}</h1><p>12 vragen · antwoord kort en duidelijk · beantwoord alle delen van de vraag.</p>{questions.map(q=><section key={q.id} style={{border:"1px solid #ddd",borderRadius:16,padding:22,margin:"18px 0"}}><h2>Vraag {q.id}</h2><p style={{fontSize:18}}>{q.question}</p><SpeakButton text={q.question}/><div style={{marginTop:14}}><button onClick={()=>setShow({...show,[q.id]:!show[q.id]})}>{show[q.id]?"Verberg voorbeeld":"Bekijk voorbeeldantwoord"}</button></div>{show[q.id]&&<p style={{background:"#f6f6f6",padding:14,borderRadius:10}}>{q.sampleAnswer}</p>}</section>)}<small>{speakingSource}</small></main>}
