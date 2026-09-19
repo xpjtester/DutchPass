@@ -1,0 +1,5 @@
+"use client";
+import Link from "next/link";
+import SpeakButton from "../../../../components/SpeakButton";
+import {extraGeneralQuestions,extraPhotoGroups} from "../../../../data/a2-speaking-extra";
+export default function Extra(){return <main style={{maxWidth:860,margin:"50px auto",padding:24}}><Link href="/a2/spreken">← Spreekvaardigheid</Link><h1>A2 Spreken · Extra oefening</h1><h2>Algemene vragen</h2>{extraGeneralQuestions.map((q,i)=><section key={q} style={{borderBottom:"1px solid #eee",padding:"14px 0"}}><b>{i+1}. {q}</b><div style={{marginTop:8}}><SpeakButton text={q}/></div></section>)}<h2 style={{marginTop:40}}>Foto-opdrachten</h2><p style={{color:"#666"}}>De vragen uit het bronbestand zijn per onderwerp gegroepeerd.</p>{extraPhotoGroups.map((g,i)=><section key={g.title} style={{border:"1px solid #ddd",borderRadius:16,padding:20,margin:"18px 0"}}><h3>{i+1}. {g.title}</h3>{g.questions.map(q=><div key={q} style={{margin:"14px 0"}}><p>{q}</p><SpeakButton text={q}/></div>)}</section>)}</main>}
