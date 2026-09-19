@@ -8,7 +8,7 @@ const skillCards = [
   {title:"Schrijven",icon:"✍️",desc:"E-mails, formulieren en korte teksten.",href:"/a2/schrijven",meta:"5 oefentoetsen · 20 opdrachten",active:true},
   {title:"Spreken",icon:"🎙️",desc:"Korte antwoorden, situaties en extra spreektraining.",href:"/a2/spreken",meta:"7 oefentoetsen · 84 vragen",active:true},
   {title:"Lezen",icon:"📖",desc:"Korte teksten, berichten en praktische leesvragen.",href:"/a2/lezen",meta:"Leesvaardigheid",active:true},
-  {title:"Luisteren",icon:"🎧",desc:"Gesprekken, mededelingen en luistervragen.",href:"#",meta:"Binnenkort",active:false},
+  {title:"Luisteren",icon:"🎧",desc:"Gesprekken, mededelingen en luistervragen.",href:"/a2/luisteren",meta:"9 hoofdstukken · 56 audiofragmenten",active:true},
   {title:"KNM",icon:"🇳🇱",desc:"Kennis van de Nederlandse Maatschappij: wonen, werk, zorg, overheid en dagelijks leven.",href:"/a2/knm",meta:"KNM-cursus · oefenvragen · proefexamens",active:true},
 ];
 
