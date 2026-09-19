@@ -10,10 +10,10 @@ export default function Luisteren(){
         <small style={{opacity:.75,fontWeight:700}}>A2 · LUISTEREN</small>
         <h1 style={{fontSize:40,margin:"10px 0"}}>Luistervaardigheid</h1>
         <p style={{fontSize:18,lineHeight:1.6,maxWidth:760,opacity:.88}}>
-          Oefen met dialogen, intensief luisteren, pauzeversies en opdrachten uit hoofdstuk 1–9.
+          Oefen met dialogen, intensief luisteren, pauzeversies en opdrachten uit hoofdstuk 1–18.
         </p>
         <div style={{display:"flex",gap:18,marginTop:20,flexWrap:"wrap"}}>
-          <b>9 hoofdstukken</b>
+          <b>18 hoofdstukken</b>
           <b>{listeningTrackCount} audiofragmenten</b>
         </div>
       </section>
@@ -33,7 +33,7 @@ export default function Luisteren(){
           </div>
         </section>)}
       </div>
-      <p style={{fontSize:13,color:"#777",marginTop:28}}>Plaats de MP3-bestanden lokaal in <code>public/audio/nig/</code>. De pagina koppelt daarna automatisch aan alle 56 bestanden.</p>
+      <p style={{fontSize:13,color:"#777",marginTop:28}}>Plaats de MP3-bestanden lokaal in <code>public/audio/nig/</code>. De pagina koppelt daarna automatisch aan alle 107 bestanden.</p>
     </div>
   </main>
 }
